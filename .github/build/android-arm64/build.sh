@@ -5,7 +5,8 @@ SCRIPT_PATH="$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )"
 SHARED_PATH="$SCRIPT_PATH/../shared"
 
 # Android NDK settings
-export ANDROID_NDK_HOME="${ANDROID_NDK_HOME:-/opt/android-ndk}"
+unset ANDROID_NDK_HOME
+export ANDROID_NDK_HOME="/opt/android-ndk"
 TOOLCHAIN="$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64"
 export TARGET="aarch64-linux-android21"
 
@@ -42,7 +43,7 @@ export FONTCONFIG_OPTIONS=""
 export HEIF_OPTIONS="-DENABLE_MULTITHREADING_SUPPORT=false"
 export JPEGTURBO_OPTIONS="-DWITH_SIMD=0"
 export LCMS_OPTIONS=""
-export OPENEXR_OPTIONS=""
+export OPENEXR_OPTIONS="-DImath_DIR=$INSTALL_PREFIX/lib/cmake/Imath -Dopenjph_DIR=$INSTALL_PREFIX/lib/cmake/openjph"
 export WEBP_OPTIONS="--enable-libwebpmux --enable-libwebpdemux"
 
 # Set compiler for cross-compilation
