@@ -10,6 +10,8 @@ jobs:
   build-android:
     name: android ${{matrix.architecture}} static
     runs-on: ubuntu-24.04
+    container:
+      image: ubuntu:20.04
 
     strategy:
       fail-fast: false
