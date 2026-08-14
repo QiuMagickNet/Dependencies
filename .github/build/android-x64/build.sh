@@ -37,13 +37,10 @@ export SED="sed"
 export ZIP_OPTIONS="-DENABLE_OPENSSL=OFF -DENABLE_MBEDTLS=OFF -DENABLE_GNUTLS=OFF"
 
 # Library specific options
-export DE265_OPTIONS=""
 export FFI_OPTIONS="--disable-builddir --host=x86_64-linux-android"
 export FONTCONFIG_OPTIONS=""
-export HEIF_OPTIONS="-DENABLE_MULTITHREADING_SUPPORT=false"
 export JPEGTURBO_OPTIONS="-DWITH_SIMD=0"
 export LCMS_OPTIONS=""
-export OPENEXR_OPTIONS="-DImath_DIR=$INSTALL_PREFIX/lib/cmake/Imath -Dopenjph_DIR=$INSTALL_PREFIX/lib/cmake/openjph"
 export WEBP_OPTIONS="--enable-libwebpmux --enable-libwebpdemux"
 
 # Set compiler for cross-compilation
@@ -67,14 +64,6 @@ $SHARED_PATH/webp.sh
 $SHARED_PATH/tiff.sh
 $SHARED_PATH/openjpeg.sh
 $SHARED_PATH/lcms.sh
-$SHARED_PATH/aom.sh
-$SHARED_PATH/de265.sh
-$SHARED_PATH/openh264.sh
-$SHARED_PATH/heif.sh
-$SHARED_PATH/raw.sh
-$SHARED_PATH/openjph.sh
-$SHARED_PATH/imath.sh
-$SHARED_PATH/exr.sh
 $SHARED_PATH/ffi.sh
 $SHARED_PATH/glib.sh
 $SHARED_PATH/lqr.sh
@@ -87,6 +76,3 @@ $SHARED_PATH/croco.sh
 $SHARED_PATH/gdk-pixbuf.sh
 $SHARED_PATH/rsvg.sh
 $SHARED_PATH/raqm.sh
-$SHARED_PATH/highway.sh
-$SHARED_PATH/brotli.sh
-$SHARED_PATH/jpeg-xl.sh
