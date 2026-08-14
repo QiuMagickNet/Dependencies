@@ -1,7 +1,4 @@
 on:
-  push:
-    branches:
-    - build-android
   workflow_dispatch:
 
 permissions:
