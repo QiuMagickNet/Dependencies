@@ -7,10 +7,10 @@ sudo apt-get update -y
 
 sudo apt-get install -y autoconf autopoint curl gettext git gperf libtool nasm pkg-config python3 python3-pip ragel texinfo unzip zip
 
-sudo pip3 install --upgrade pip
-sudo pip3 install cmake==4.3.4
-sudo pip3 install meson==1.11.1
-sudo pip3 install ninja==1.13.0
+sudo pip3 install --break-system-packages --upgrade pip
+sudo pip3 install --break-system-packages cmake==4.3.4
+sudo pip3 install --break-system-packages meson==1.11.1
+sudo pip3 install --break-system-packages ninja==1.13.0
 
 # Install Android NDK
 export ANDROID_NDK_VERSION="r28"
