@@ -7,7 +7,7 @@ sudo apt-get update -y
 
 sudo apt-get install -y autoconf autopoint curl gettext git gperf libtool nasm pkg-config python3 python3-pip ragel texinfo unzip zip
 
-sudo pip3 install --break-system-packages --upgrade pip
+# sudo pip3 install --break-system-packages --upgrade pip # skip: pip 24.0 from debian cannot be re-installed
 sudo pip3 install --break-system-packages cmake==4.3.4
 sudo pip3 install --break-system-packages meson==1.11.1
 sudo pip3 install --break-system-packages ninja==1.13.0
