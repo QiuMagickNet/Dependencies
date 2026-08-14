@@ -8,15 +8,15 @@ SHARED_PATH="$SCRIPT_PATH/../shared"
 unset ANDROID_NDK_HOME
 export ANDROID_NDK_HOME="/opt/android-ndk"
 TOOLCHAIN="$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64"
-export TARGET="i686-linux-android21"
+export TARGET="i686-linux-android24"
 
 # Compiler settings
 if [[ "${DEBUG_BUILD}" ]]; then
-  export FLAGS="-g3 -O0 -fPIC -DDEBUG -D_FILE_OFFSET_BITS=64"
+  export FLAGS="-g3 -O0 -fPIC -DDEBUG"
   export CMAKE_BUILD_TYPE="Debug"
   export MESON_BUILD_TYPE="debug"
 else
-  export FLAGS="-O3 -fPIC -DNDEBUG -D_FILE_OFFSET_BITS=64"
+  export FLAGS="-O3 -fPIC -DNDEBUG"
   export CMAKE_BUILD_TYPE="Release"
   export MESON_BUILD_TYPE="release"
 fi
@@ -28,7 +28,7 @@ export PKG_CONFIG_PATH="$INSTALL_PREFIX/lib/pkgconfig"
 
 # Shared options
 export CMAKE_COMMAND="cmake"
-export CMAKE_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK_HOME/build/cmake/android.toolchain.cmake -DANDROID_ABI=x86 -DANDROID_PLATFORM=android-21 -DANDROID_STL=c++_static"
+export CMAKE_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK_HOME/build/cmake/android.toolchain.cmake -DANDROID_ABI=x86 -DANDROID_PLATFORM=android-24 -DANDROID_STL=c++_static"
 export CONFIGURE="./configure"
 export CONFIGURE_OPTIONS="--host i686-linux-android"
 export MAKE="make -j$(nproc)"

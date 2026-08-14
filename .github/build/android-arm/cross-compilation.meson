@@ -1,6 +1,6 @@
 [binaries]
-c = '/opt/android-ndk/toolchains/llvm/prebuilt/linux-x86_64/bin/armv7a-linux-androideabi21-clang'
-cpp = '/opt/android-ndk/toolchains/llvm/prebuilt/linux-x86_64/bin/armv7a-linux-androideabi21-clang++'
+c = '/opt/android-ndk/toolchains/llvm/prebuilt/linux-x86_64/bin/armv7a-linux-androideabi24-clang'
+cpp = '/opt/android-ndk/toolchains/llvm/prebuilt/linux-x86_64/bin/armv7a-linux-androideabi24-clang++'
 ar = '/opt/android-ndk/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar'
 ranlib = '/opt/android-ndk/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ranlib'
 pkgconfig = ['pkg-config']
