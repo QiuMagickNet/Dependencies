@@ -5,7 +5,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 sudo apt-get update -y
 
-sudo apt-get install -y autoconf autopoint curl gettext git gperf libtool nasm pkg-config python python3-pip ragel texinfo unzip zip
+sudo apt-get install -y autoconf autopoint curl gettext git gperf libtool nasm pkg-config python3 python3-pip ragel texinfo unzip zip
 
 sudo pip3 install --upgrade pip
 sudo pip3 install cmake==4.3.4
