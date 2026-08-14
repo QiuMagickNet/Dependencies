@@ -8,7 +8,7 @@ SHARED_PATH="$SCRIPT_PATH/../shared"
 unset ANDROID_NDK_HOME
 export ANDROID_NDK_HOME="/opt/android-ndk"
 TOOLCHAIN="$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64"
-export TARGET="aarch64-linux-android24"
+export TARGET="aarch64-linux-android28"
 
 # Compiler settings
 if [[ "${DEBUG_BUILD}" ]]; then
@@ -28,12 +28,13 @@ export PKG_CONFIG_PATH="$INSTALL_PREFIX/lib/pkgconfig"
 
 # Shared options
 export CMAKE_COMMAND="cmake"
-export CMAKE_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK_HOME/build/cmake/android.toolchain.cmake -DANDROID_ABI=arm64-v8a -DANDROID_PLATFORM=android-24 -DANDROID_STL=c++_static"
+export CMAKE_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK_HOME/build/cmake/android.toolchain.cmake -DANDROID_ABI=arm64-v8a -DANDROID_PLATFORM=android-28 -DANDROID_STL=c++_static"
 export CONFIGURE="./configure"
 export CONFIGURE_OPTIONS="--host aarch64-linux-android"
 export MAKE="make -j$(nproc)"
 export MESON_OPTIONS="--cross-file=$SCRIPT_PATH/cross-compilation.meson"
 export SED="sed"
+export GLIB_OPTIONS="-Diconv=libc"
 export ZIP_OPTIONS="-DENABLE_OPENSSL=OFF -DENABLE_MBEDTLS=OFF -DENABLE_GNUTLS=OFF"
 
 # Library specific options

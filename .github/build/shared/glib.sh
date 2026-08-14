@@ -15,7 +15,7 @@ rm gobject/glib-enumtypes.h
 mkdir __build
 cd __build
 export CFLAGS="$FLAGS"
-meson $MESON_OPTIONS --prefix=$INSTALL_PREFIX --buildtype=$MESON_BUILD_TYPE --default-library=static -Dselinux=disabled -Dxattr=false -Dlibmount=disabled -Dnls=disabled -Dinternal_pcre=true -Dgtk_doc=false -Dman=false ..
+meson $MESON_OPTIONS --prefix=$INSTALL_PREFIX --buildtype=$MESON_BUILD_TYPE --default-library=static -Dselinux=disabled -Dxattr=false -Dlibmount=disabled -Dnls=disabled -Dinternal_pcre=true -Dgtk_doc=false -Dman=false $GLIB_OPTIONS ..
 ninja install
 
 chmod 755 $INSTALL_PREFIX/bin/glib-genmarshal
