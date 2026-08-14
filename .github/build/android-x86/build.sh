@@ -33,6 +33,7 @@ export CONFIGURE_OPTIONS="--host i686-linux-android"
 export MAKE="make -j$(nproc)"
 export MESON_OPTIONS="--cross-file=$SCRIPT_PATH/cross-compilation.meson"
 export SED="sed"
+export ZIP_OPTIONS="-DENABLE_OPENSSL=OFF -DENABLE_MBEDTLS=OFF -DENABLE_GNUTLS=OFF"
 
 # Library specific options
 export DE265_OPTIONS=""
